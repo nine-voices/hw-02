@@ -1,0 +1,94 @@
+extends ../_layouts/layout
+
+block title
+	| Main Page
+
+block content
+	.page
+		.container
+			.page__sidebar
+				a(href='#').logo
+					img(src='/img/logo/header_logo.png').logo__img
+					span.logo__text ЭпплShop
+				.feedback
+					.feedback__inner
+						.feedback__title Заказать звонок
+						.feedback__form
+							form(action='', method='post')
+								label.feedback__row
+									.feedback__row-title Ваше имя
+									input(type='text', placeholder='Константин').feedback__row-input
+								label.feedback__row
+									.feedback__row-title Телефон
+									input(type='text', placeholder='+7 (912) 000-00-00').feedback__row-input.feedback__row-input_phone
+								label.feedback__row.feedback__row_double
+									.feedback__row-title Дата звонка
+									.feedback__row-select_wrap
+										select.feedback__row-select
+											- for (var i = 1; i <= 24; i++)
+												option(value=i)= i
+										select.feedback__row-select
+											- for (var i = 1; i <= 60; i++)
+												option(value=i)= i
+								textarea(placeholder='Комментарий').feedback__textarea
+								.feedback__form-buttons
+									input(type='submit', value='Отправить').feedback__form-submit
+									input(type='reset', value='Очистить').feedback__form-reset
+				.pictures
+					ul.pictures__list
+						- for (var i = 1; i <= 9; i++)
+							li.pictures__item
+								a(href='#').pictures__link
+									img(src='//lorempixel.com/70/70/nature/' + i).pictures__img
+				.contacts
+					.contacts__inner
+						.contacts__address г. Москва, ул. Новая 246, офис 214.
+						a(href='tel: +79120000000').contacts__phone +7(912) 000-00-00
+			.page__content
+				.slider
+					ul.slider__list
+						- for (var i = 1; i <= 5; i++)
+							li.slider_item
+								img(src='//lorempixel.com/740/300/technics/' + i).slider__img
+								.slider__description
+									.slider__description-inner
+										.slider__description-title
+											a(href='#') iMac за пол-цены
+										.slider__description-text Принеси свой старый Mac и получи скидку на новый!
+				each section in ['Популярные товары', 'Товары со скидкой']
+					.products
+						.page-title
+								.page-title__text = section
+							ul.products__list
+								each title, indx in ['Apple Thunder Display 27', 'iMac 27"', 'iPhone 5s Gold']
+									li.products__item
+										a(href='#').products__item-inner
+											.products__title
+												.products__title-pic
+													img(src='//lorempixel.com/80/82/technics/' + indx)
+												.products__title-text_wrap
+													.products__title-text= title
+
+											.products__options
+												ul.products__options-list
+													li.products__options-item
+														.products__options-key Артикул
+														.products__options-value 68759851
+													li.products__options-item
+														.products__options-key Опция
+														.products__options-value включена
+													li.products__options-item
+														.products__options-key Цвет
+														.products__options-value серебристый
+													li.products__options-item
+														.products__options-key Размер
+														.products__options-value 1280*1245*90
+													li.products__options-item
+														.products__options-key Вес
+														.products__options-value 9кг
+													li.products__options-item
+														.products__options-key Вес
+														.products__options-value 9кг
+													li.products__options-item
+														.products__options-key Вес
+														.products__options-value 9кг

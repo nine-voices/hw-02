@@ -1,0 +1,140 @@
+@import "../_misc/mixins";
+
+// sidebar
+
+.page {
+	.container {
+		@include clearfix;
+	}
+}
+
+.page__sidebar {
+	float: left;
+	width: 230px;
+}
+
+// logo
+
+.logo {
+	display: block;
+	margin-bottom: 25px;
+}
+
+.logo__img {
+	max-height: 57px;
+	max-width: 199px;
+	display: block;
+}
+
+.logo__text {
+	position: absolute;
+	top: 0;
+	left: -9999px;
+}
+
+
+// feedback
+
+.feedback {
+	background: #f4f6f9;
+
+}
+
+.feedback__inner {
+	padding: 14px 10px;
+}
+
+.feedback__row {
+	display: block;
+	margin-bottom: 20px;
+}
+
+.feedback__title {
+	@include inlineblock;
+	width: 75px;
+	font-size: 14px;
+	line-height: 16;
+	color: #5c7b98;
+}
+
+.feedback__row-input {
+	@include input-text(135px);
+}
+
+.feedback__row-select_wrap {
+	@include inlineblock;
+}
+
+.feedback__textarea {
+	@include input-text(200px);
+	height: 70px;
+	resize: none;
+}
+
+.feedback__form-submit {
+	padding: 0;
+	margin: 0;
+	width: 90px;
+	height: 35px;
+	border: 0 none;
+	@include inlineblock;
+	@extend .elektra_light_bold;
+	font-size: 15px;
+	color: #fff;
+}
+
+.feedback__form-reset {
+	@extend .feedback__form-submit;
+}
+
+.feedback__form-submit {
+	background: #00b9fe;
+}
+
+.feedback__form-reset {
+	background: #fff;
+}
+
+.pictures__list {
+	@include clearfix;
+	margin-left: -10px;
+}
+
+// pictures
+
+.pictures__item {
+	float: left;
+	width: 70px;
+	height: 70px;
+	margin-left: 10px;
+	margin-bottom: -10px;
+}
+
+
+// contacts
+
+.contacts {
+	background: #f4f6f9;
+}
+
+.contacts__inner {
+	padding: 15px 20px;
+}
+
+.contacts__address {
+	background: url('/../img/icons/mark.png') 0 0 no-repeat;
+	padding-left: 20px;
+	font-size: 14px;
+	line-height: 16;
+	color: #5c7b98;
+	text-align: center;
+}
+
+.contacts__phone {
+	@include inlineblock;
+	background: url('/../img/icons/phone.png') 0 0 no-repeat;
+	text-decoration: none;
+	font-size: 14px;
+	line-height: 21;
+	color: #5c7b98;
+}

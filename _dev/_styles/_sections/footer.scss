@@ -1,0 +1,116 @@
+@import "../_misc/mixins";
+
+// footer
+
+.footer {
+	background: url('/img/bg/footer-bg.png') 0 0 repeat #613993;
+	.container {
+		padding-top: 60px;
+		min-height: 240px - 60px;
+	}
+}
+
+.footer__logo {
+	display: block;
+	top: 90px;
+	left: 0;
+
+	img {
+		position: absolute;
+		max-width: 139px;
+		max-height: 39px;
+	}
+}
+
+.footer__logo-text {
+	position: absolute;
+	top: 0;
+	left: -9999px;
+}
+
+.footer__options {
+	margin-left: 260px;
+	width: 485px;
+}
+
+.footer__options-list {
+	margin-left: -15px;
+}
+
+.footer__options-item {
+	@include inlineblock;
+	width: 140px;
+	margin-left: 15px;
+}
+
+.footer__options-title {
+	@extend .elektra_light_bold;
+	font-size: 15px;
+	line-height: 17px;
+	color: #fff;
+	margin-bottom: 10px;
+}
+
+.footer__menu-link {
+	font-size: 15px;
+	line-height: 17px;
+	color: #fff;
+	text-decoration: underline;
+
+	&:hover {
+		text-decoration: none;
+	}
+}
+
+.footer__socials {
+	position: absolute;
+	top: 90px;
+	right: 0;
+	margin-bottom: 30px;
+}
+
+.footer__socials-list {
+	@include clearfix;
+
+}
+
+.footer__socials-item {
+	float: left;
+}
+
+.footer__socials-icon {
+	float: left;
+}
+
+.footer__socials-network {
+	width: 45px;
+	height: 44px;
+	display: block;
+	background: url('/img/icons/socials.png') 0 0 no-repeat;
+	opacity: 1;
+	transition: opacity .3s;
+
+	&:hover {
+		opacity: .8;
+	}
+}
+
+.footer__socials-icon_ {
+	&vk {
+		.footer__socials-network {
+			background-position: 0 0;
+		}
+	}
+	&fb {
+	.footer__socials-network {
+		background-position: -53px 0;
+		}
+	}
+	&tw {
+			.footer__socials-network {
+				background-position: -104px 0;
+		}
+	}
+}
+
+

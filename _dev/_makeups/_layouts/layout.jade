@@ -1,0 +1,62 @@
+doctype html
+
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7"><![endif]-->
+<!--[if IE 7]><html class="no-js lt-ie9 lt-ie8"><![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9"><![endif]-->
+<!--[if gt IE 8]><html class="no-js"><![endif] -->
+
+
+html(lang='ru-Ru')
+	head
+		meta(charset='utf-8')
+		meta(http-equiv='X-UA-Compatible' content='IE=edge')
+		meta(name='viewport' content='width=device-width, initial-scale=1')
+
+		title
+			block title
+
+		meta(name='description', content='')
+		meta(name='keywords', content='')
+		meta(name='author', content='')
+		link(rel='shortcut icon', href='/dist/images/favicon.ico', type='image/x-icon')
+		link(rel='icon', href='/dist/images/favicon.ico', type='image/x-icon')
+
+		<!-- build:css css/vendor.min.css -->
+		// bower:css
+		link(rel='stylesheet', href='/_b_components/bxslider-4/dist/jquery.bxslider.css')
+		link(rel='stylesheet', href='/_b_components/jScrollPane/style/jquery.jscrollpane.css')
+		link(rel='stylesheet', href='/_b_components/normalize.css/normalize.css')
+		link(rel='stylesheet', href='/_b_components/qtip2/jquery.qtip.min.css')
+		// endbower
+		<!-- endbuild -->
+
+		link(rel='stylesheet', href='/app/css/main.min.css')
+
+		<!-- build:js js/modernizr.min.js -->
+		script(src='_b_components/modernizr/modernizr.js')
+		<!-- endbuild -->
+
+	body
+		<!-- [if lt IE 8]><p class="browserhappy">Ваш браузер <strong>устарел</strong>. Пожалуйста <a href="http://browserhappy.com">обновите</a> его.</p><![endif] -->
+
+		.wrapper
+			.maincontent
+				block content
+
+		include ../_common/_footer.jade
+
+		//- script(src='//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js')
+		//- script window.jQuery || document.write('<script src="/dist/jquery.min.js"><\/script>')
+
+		<!-- build:js js/vendor.min.js -->
+		// bower:js
+		script(src='/_b_components/jquery/dist/jquery.js')
+		script(src='/_b_components/bxslider-4/dist/jquery.bxslider.js')
+		script(src='/_b_components/jScrollPane/script/jquery.jscrollpane.min.js')
+		script(src='/_b_components/jScrollPane/script/jquery.mousewheel.js')
+		script(src='/_b_components/qtip2/jquery.qtip.min.js')
+		script(src='/_b_components/simple-select/jquery.simpleselect.js')
+		// endbower
+		<!-- endbuild -->
+
+		script(src='/app/js/main.js')

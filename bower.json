@@ -1,0 +1,68 @@
+{
+	"name": "hw-02",
+	"version": "0.1.0",
+
+	"authors": [
+		"Stas Ivanov <hubbahubbawtf@gmail.com>"
+	],
+
+	"description": "homework #2",
+	"moduleType": [
+		"node"
+	],
+
+	"keywords": [
+		"apple-shop"
+	],
+
+	"license": "MIT",
+	"ignore": [
+		"**/.*",
+		"node_modules",
+		"bower_components",
+		"_b_components",
+		"test",
+		"tests"
+	],
+
+	"dependencies": {
+		"bxslider-4": "~4.2.5",
+		"jquery": "1.11.3",
+		"jScrollPane": "jscrollpane#~2.0.22",
+		"modernizr": "~2.8.3",
+		"normalize.css": "~3.0.3",
+		"qtip2": "~2.2.1",
+		"simple-select": "*"
+	},
+
+	"overrides": {
+
+			"modernizr": {
+				"main": []
+			},
+
+			"qtip2": {
+				"main": [
+					"./jquery.qtip.min.js",
+					"./jquery.qtip.min.css"
+				],
+				"dependencies": {
+					"jquery": ">=1.6.0"
+				}
+			},
+
+			"simple-select": {
+				"main": [
+					"jquery.simpleselect.js"
+				]
+			},
+
+			"jScrollPane" : {
+				"main": [
+					"./script/jquery.jscrollpane.min.js",
+					"./script/jquery.mousewheel.js",
+					"./style/jquery.jscrollpane.css"
+				]
+			}
+	}
+}
